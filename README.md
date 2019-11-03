@@ -32,8 +32,10 @@ This repository demonstrates the scenario: analyze clash issue and create clash 
 <p align="center"><img src="./help/main.png" width="1000"></p>
  
 ## Live version
+
 (TO Deploy)
 
+Watch [this video](https://youtu.be/_lPLdPvKxgA) on how to play the demo. 
 
 ## Demonstrations
 
