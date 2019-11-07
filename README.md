@@ -39,19 +39,22 @@ Watch [this video](https://youtu.be/_lPLdPvKxgA) on how to play the demo.
 
 ## Demonstrations
 
-1. After loging in, on top left of navigation panel, select one hub, then select one project. 
-2. After selecting one projet, the active modelsets in this activeproject will be listed.
-3. Click one modelset, all clash instances will be displayed in **Clash Raw Table**. All clash assigned issue of this modelset will also be displayed in **Clash Issue Table**. All documents of this modelset will also be loaded in Forge viewer
-4. Select one issue in **Clash Issue Table**, the corresponding clash will be highlighted in Forge viewer. Click **Issue Icon** of Forge Viewer toolbar, the pushpin of the issues will be displayed, including a property panel with basic information of the issue.
+1. After logging in, on top left of navigation panel, select one hub, then select one project. 
+2. After selecting one project, the active modelsets in this activeproject will be listed.
+3. Click one modelset, all clash instances will be displayed in **Clash Raw Table**. All clash assigned issue of this modelset will also be displayed in **Clash Issue Table**. All documents of this modelset will also be loaded in the Forge viewer
+4. Select one issue in **Clash Issue Table**, the corresponding clash will be highlighted in the Forge viewer. Click **Issue Icon** of the Forge Viewer toolbar, the pushpin of the issues will be displayed, including a property panel with basic information of the issue.
 
 <p align="center"><img src="./help/readissue.png" width="400"></p>
 
-6.  Select one issue in **Clash Raw Table** you want to create clash issue, the corresponding clash will be highlighted in Forge viewer. Click **Edit Icon** of Forge Viewer toolbar, input a title for the new issue, then click elements of the clashed objects (red/blue). The process of creating a new clash issue will start. 
- <p align="center"><img src="./help/createissue.png" width="400"></p>
-After a while, **Clash Issue Table** will be refreshed. Switch to BIM 360 UI, check the newly created issue there. It also contains the screenshot of the clash as attachment.
- <p align="center"><img src="./help/ui.png" width="600"></p>
+5.  Select one issue in **Clash Raw Table** you want to create clash issue, the corresponding clash will be highlighted in the Forge viewer. Click **Edit Icon** of the Forge Viewer toolbar, input a title for the new issue, then click elements of the clashed objects (red/blue). The process of creating a new clash issue will start. 
 
-Watch [this video](https://youtu.be/_lPLdPvKxgA) on how to play this demo.
+<p align="center"><img src="./help/createissue.png" width="400"></p>
+
+After a while, **Clash Issue Table** will be refreshed. Switch to BIM 360 UI, check the newly created issue there. It also contains the screenshot of the clash as attachment.
+
+<p align="center"><img src="./help/ui.png" width="600"></p>
+
+Watch [this video](https://youtu.be/_lPLdPvKxgA) to learn how to use this demo.
 
 
 ## Technology Architecture
@@ -90,16 +93,16 @@ Watch [this video](https://www.youtube.com/watch?v=Oqa9O20Gj0c) on how deploy sa
 
 # Further Reading
 - [Model Coordination API](https://dev.forge.autodesk.com/en/docs/bim360/v1/tutorials/model-coordination/?sha=6092_51)  
-- [BIM 360 API](https://developer.autodesk.com/en/docs/bim360/v1/overview/) and [App Provisioning](https://forge.autodesk.com/blog/bim-360-docs-provisioning-forge-apps)
-- [Data Management API](https://developer.autodesk.com/en/docs/data/v2/overview/)
-- [Viewer](https://developer.autodesk.com/en/docs/viewer/v7)
+- [BIM 360 API](https://forge.autodesk.com/en/docs/bim360/v1/overview/) and [App Provisioning](https://forge.autodesk.com/blog/bim-360-docs-provisioning-forge-apps)
+- [Data Management API](https://forge.autodesk.com/en/docs/data/v2/overview/)
+- [Viewer](https://forge.autodesk.com/en/docs/viewer/v7)
  
 
 Tutorials:
 
 - [View BIM 360 Models](http://learnforge.autodesk.io/#/tutorials/viewhubmodels)
 - [Model Coordination API Document](TODO)
-- [Retrieve Issues](https://developer.autodesk.com/en/docs/bim360/v1/tutorials/retrieve-issues)
+- [Retrieve Issues](https://forge.autodesk.com/en/docs/bim360/v1/tutorials/retrieve-issues)
 
 Blogs:
 
