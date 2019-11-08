@@ -24,7 +24,8 @@ This repository demonstrates the scenario: analyze clash issue and create clash 
 
 
 ## Description
-This repository demonstrates the scenario: analyze clash issue and create clash issue from application. 
+This repository demonstrates the scenario: analyze clash issue and create clash issue from application. To work with the sample, firstly upload some source modesl manually to BIM 360 folder, or by other tool such as [BIM 360 Model Coordination Unit Test in Node.js](https://github.com/xiaodongliang/bim360-mcapi-node-unit.test/blob/master/test_04_CreateModelSet.js) and create model set in Model Coordination module with this folder. The demo source model files can be found at [BIM 360 Model Coorination API Unit Test
+ in Node.js](https://github.com/xiaodongliang/bim360-mcapi-node-unit.test/tree/master/Source%20Files). It includes two versions of models set.
 
 
 ## Thumbnail
@@ -92,7 +93,6 @@ Watch [this video](https://www.youtube.com/watch?v=Oqa9O20Gj0c) on how deploy sa
  
 
 # Further Reading
-- [Model Coordination API](https://dev.forge.autodesk.com/en/docs/bim360/v1/tutorials/model-coordination/?sha=6092_51)  
 - [BIM 360 API](https://forge.autodesk.com/en/docs/bim360/v1/overview/) and [App Provisioning](https://forge.autodesk.com/blog/bim-360-docs-provisioning-forge-apps)
 - [Data Management API](https://forge.autodesk.com/en/docs/data/v2/overview/)
 - [Viewer](https://forge.autodesk.com/en/docs/viewer/v7)
