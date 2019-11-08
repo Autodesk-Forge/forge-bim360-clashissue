@@ -41,16 +41,16 @@ class MCReadIssue {
      } );   
   }
 
+  async reset(){
+     //reset
+     if(this._issueTable) 
+       this._issueTable.rows().clear().draw()
+      this._clashIssue = null 
+  }
   async produceClashIssues(mc_container_id,ms_id,ms_v_id){
  
     try{
-      $('#clashissueSpinner').css({ display: "block" })
-
-      //reset
-      if(this._issueTable) 
-        this._issueTable.rows().clear().draw()
-      if(this._clashIssue) 
-        this._clashIssue = null 
+      $('#clashissueSpinner').css({ display: "block" }) 
 
       const jobId = await this.startIssuesJob(mc_container_id,ms_id,ms_v_id)
 
