@@ -36,7 +36,8 @@ class MCReadIssue {
       { data: '7',title:"Clash Groups",orderable:false}  
     ]
     this._issueTable = $('#tableIssueView').DataTable( {
-      columns: cols,searching: false, paging: false, info: false,scrollY:"40vh",
+      columns: cols,searching: false, searching: false,
+      bPaginate : true, pagingType: 'simple',  info: false,scrollY:"40vh",
       scrollCollapse: true
      } );   
   }

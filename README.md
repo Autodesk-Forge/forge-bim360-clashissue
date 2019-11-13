@@ -10,14 +10,10 @@ This repository demonstrates the scenario: analyze clash issue and create clash 
 [![Data-Management](https://img.shields.io/badge/Data%20Management-v1-green.svg)](https://forge.autodesk.com/en/docs/data/v2/developers_guide/overview/)
 [![Viewer](https://img.shields.io/badge/Viewer-v7-green.svg)](https://forge.autodesk.com/en/docs/viewer/v7/developers_guide/overview/)
 [![BIM-360](https://img.shields.io/badge/BIM%20360-v1-green.svg)](https://forge.autodesk.com/en/docs/bim360/v1/overview/introduction/) 
+ 
 
-
-[![PowerBI-Client](https://img.shields.io/badge/PowerBI--Client-v2.8.0-orange)](https://github.com/microsoft/PowerBI-JavaScript)
-[![PowerBIAPI](https://img.shields.io/badge/PowerBI-v1.0-blue)](https://docs.microsoft.com/en-us/rest/api/power-bi/)
-
-[![ModelSetAPI](https://img.shields.io/badge/ModelSetAPI-3.0.51-lightgrey)]()
-[![ClashAPI](https://img.shields.io/badge/ClashAPI-3.3.17-yellowgreen)]()
-[![IndexAPI](https://img.shields.io/badge/IndexAPI-1.2.32-orange)]()
+[![ModelSetAPI](https://img.shields.io/badge/ModelSetAPI-3.0.65-orange)](https://www.npmjs.com/package/forge-bim360-modelcoordination-modelset)
+[![ClashAPI](https://img.shields.io/badge/ClashAPI-3.3.27-yellowgreen)](https://www.npmjs.com/package/forge-bim360-modelcoordination-clash)
 
 [![License](http://img.shields.io/:license-mit-red.svg)](http://opensource.org/licenses/MIT)
 [![Level](https://img.shields.io/badge/Level-Intermediate-blue.svg)](http://developer.autodesk.com/)
@@ -34,9 +30,12 @@ This repository demonstrates the scenario: analyze clash issue and create clash 
  
 ## Live version
 
-(TO Deploy)
+https://bim360-clash-issue.herokuapp.com/
+
+note: provision the app key with test BIM account firstly. click **Config** to get detail information)
 
 Watch [this video](https://youtu.be/_lPLdPvKxgA) on how to play the demo. 
+
 
 ## Demonstrations
 
@@ -60,7 +59,7 @@ Watch [this video](https://youtu.be/_lPLdPvKxgA) to learn how to use this demo.
 
 ## Technology Architecture
 
-  < TODO >
+https://bim360-clash-issue.herokuapp.com/
 
 # Setup
 
@@ -93,10 +92,15 @@ Watch [this video](https://www.youtube.com/watch?v=Oqa9O20Gj0c) on how deploy sa
  
 
 # Further Reading
-- [Model Coordination API Document](TODO)
+
+- [Model Coordination API](https://dev.forge.autodesk.com/en/docs/bim360/v1/tutorials/model-coordination/?sha=6092_51)
+- [Model Coordination API SDK](https://www.npmjs.com/package/autodesk.forge.designautomation) 
 - [BIM 360 API](https://forge.autodesk.com/en/docs/bim360/v1/overview/) and [App Provisioning](https://forge.autodesk.com/blog/bim-360-docs-provisioning-forge-apps)
 - [Data Management API](https://forge.autodesk.com/en/docs/data/v2/overview/)
 - [Viewer](https://forge.autodesk.com/en/docs/viewer/v7)
+## Tutorials
+- [Model Coordination API Document](https://dev.forge.autodesk.com/en/docs/bim360/v1/tutorials/model-coordination/mc-concept-modelset/?sha=6092_51)
+- [View BIM 360 Models](http://learnforge.autodesk.io/#/tutorials/viewhubmodels)
  
 
 Tutorials:

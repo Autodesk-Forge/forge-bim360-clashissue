@@ -16,75 +16,72 @@
 // UNINTERRUPTED OR ERROR FREE.
 /////////////////////////////////////////////////////////////////////
 
-'use strict';    
+'use strict'; 
  
-//const msclient = require("../MCAPI/Modelset") 
+const msclient = require("forge-bim360-modelcoordination-modelset")   
 
-const msclient = require("@adsk/autodesk-forge-bim360-modelcoordination-modelset") 
-
-
-module.exports = { 
-    getModelSets:getModelSets,
-    getModelSet:getModelSet,
-    getModelSetVersions:getModelSetVersions,
-    getModelSetVersion:getModelSetVersion 
+module.exports = {
+    getModelSets: getModelSets,
+    getModelSet: getModelSet,
+    getModelSetVersions: getModelSetVersions,
+    getModelSetVersion: getModelSetVersion
 }
 
 async function getModelSets(input) {
-  msclient.ApiClient.instance.authentications["oauth2AuthCode"].accessToken = input.credentials.access_token;
-  return new Promise((resolve, reject) => {
-      const containersApi = new msclient.ContainersApi() 
-      containersApi.getModelSets(input.mc_container_id)
-      .then(res=>{
-          resolve(res)
-      })
-      .catch(ex =>{
-          console.log(ex) 
-          reject(ex)
-      })  
-  })  
-} 
+    msclient.ApiClient.instance.authentications["oauth2AuthCode"].accessToken = input.credentials.access_token;
+    return new Promise((resolve, reject) => {
+        const modelsetApi = new msclient.ModelSetApi()
+        modelsetApi.getModelSets(input.mc_container_id)
+            .then(res => {
+                resolve(res)
+            })
+            .catch(ex => {
+                console.log(ex)
+                reject(ex)
+            })
+    })
+}
 
 async function getModelSet(input) {
-  msclient.ApiClient.instance.authentications["oauth2AuthCode"].accessToken = input.credentials.access_token;
-  return new Promise((resolve, reject) => {
-      const modelsetsApi = new msclient.ModelSetsApi()
-      modelsetsApi.getModelSet(input.mc_container_id,input.ms_id)
-      .then(res=>{
-          resolve(res)
-      })
-      .catch(ex =>{
-          console.log(ex) 
-          reject(ex)
-      })  
-  })  
-} 
+    msclient.ApiClient.instance.authentications["oauth2AuthCode"].accessToken = input.credentials.access_token;
+    return new Promise((resolve, reject) => {
+        const modelsetApi = new msclient.ModelSetApi() 
+        modelsetApi.getModelSet(input.mc_container_id, input.ms_id)
+            .then(res => {
+                resolve(res)
+            })
+            .catch(ex => {
+                console.log(ex)
+                reject(ex)
+            })
+    })
+}
 
 async function getModelSetVersions(input) {
-  msclient.ApiClient.instance.authentications["oauth2AuthCode"].accessToken = input.credentials.access_token;
-  return new Promise((resolve, reject) => {
-      const msVersionApi = new msclient.ModelSetVersionsApi() 
-      msVersionApi.getModelSetVersions(input.mc_container_id,input.ms_id)
-      .then(res=>{
-          resolve(res)
-      })
-      .catch(ex =>{
-          console.log(ex)
-          reject(ex)
-      })  
-  })  
-} 
-async function getModelSetVersion(input) {
     msclient.ApiClient.instance.authentications["oauth2AuthCode"].accessToken = input.credentials.access_token;
     return new Promise((resolve, reject) => {
         const msVersionApi = new msclient.ModelSetVersionsApi() 
-        msVersionApi.getModelSetVersion(input.mc_container_id,input.ms_id,input.ms_v_id)
-        .then(res=>{
-            resolve(res)
-         })
-        .catch(ex =>{
-            console.log(ex)
-            reject(ex)
-        })  
-    })  
-  }  
+        msVersionApi.getModelSetVersions(input.mc_container_id, input.ms_id)
+            .then(res => {
+                resolve(res)
+            })
+            .catch(ex => {
+                console.log(ex)
+                reject(ex)
+            })
+    })
+}
+async function getModelSetVersion(input) {
+    msclient.ApiClient.instance.authentications["oauth2AuthCode"].accessToken = input.credentials.access_token;
+    return new Promise((resolve, reject) => {
+        const msVersionApi = new msclient.ModelSetVersionsApi()
+        msVersionApi.getModelSetVersion(input.mc_container_id, input.ms_id, input.ms_v_id)
+            .then(res => {
+                resolve(res)
+            })
+            .catch(ex => {
+                console.log(ex)
+                reject(ex)
+            })
+    })
+}  

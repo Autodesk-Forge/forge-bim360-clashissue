@@ -30,7 +30,9 @@ class ClashRawView {
       { data: '6',title:"R View Id",orderable:false} 
     ]
     this._clashtable = $('#clashRawTable').DataTable( {
-      columns: cols,searching: false, paging: false, info: false,scrollY:"40vh",
+      columns: cols,ordering:false,searching: false,
+      bPaginate : true, pagingType: 'simple', 
+      info: false,scrollY:"40vh",
       scrollCollapse: true
      } );   
   }
