@@ -75,7 +75,7 @@ Clone this project or download it. It's recommended to install [GitHub desktop](
 
     git clone  https://github.com/xiaodongliang/bim360-mcapi-node-clashissue.sample
 
-Open the project folder in **Visual Sutdio Code**. Install the required packages, set the enviroment variables with your client ID & secret and finally start it. Via command line, navigate to the folder where this repository was cloned and use the following:
+Open the project folder in **Visual Studio Code**. Install the required packages, set the environment variables with your client ID & secret and finally start it. Via command line, navigate to the folder where this repository was cloned and use the following:
 
     npm install 
     node start.js
