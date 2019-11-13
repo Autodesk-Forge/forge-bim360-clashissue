@@ -10,14 +10,10 @@ This repository demonstrates the scenario: analyze clash issue and create clash 
 [![Data-Management](https://img.shields.io/badge/Data%20Management-v1-green.svg)](https://forge.autodesk.com/en/docs/data/v2/developers_guide/overview/)
 [![Viewer](https://img.shields.io/badge/Viewer-v7-green.svg)](https://forge.autodesk.com/en/docs/viewer/v7/developers_guide/overview/)
 [![BIM-360](https://img.shields.io/badge/BIM%20360-v1-green.svg)](https://forge.autodesk.com/en/docs/bim360/v1/overview/introduction/) 
+ 
 
-
-[![PowerBI-Client](https://img.shields.io/badge/PowerBI--Client-v2.8.0-orange)](https://github.com/microsoft/PowerBI-JavaScript)
-[![PowerBIAPI](https://img.shields.io/badge/PowerBI-v1.0-blue)](https://docs.microsoft.com/en-us/rest/api/power-bi/)
-
-[![ModelSetAPI](https://img.shields.io/badge/ModelSetAPI-3.0.51-lightgrey)]()
-[![ClashAPI](https://img.shields.io/badge/ClashAPI-3.3.17-yellowgreen)]()
-[![IndexAPI](https://img.shields.io/badge/IndexAPI-1.2.32-orange)]()
+[![ModelSetAPI](https://img.shields.io/badge/ModelSetAPI-3.0.65-orange)](https://www.npmjs.com/package/forge-bim360-modelcoordination-modelset)
+[![ClashAPI](https://img.shields.io/badge/ClashAPI-3.3.27-yellowgreen)](https://www.npmjs.com/package/forge-bim360-modelcoordination-clash)
 
 [![License](http://img.shields.io/:license-mit-red.svg)](http://opensource.org/licenses/MIT)
 [![Level](https://img.shields.io/badge/Level-Intermediate-blue.svg)](http://developer.autodesk.com/)
@@ -34,9 +30,12 @@ This repository demonstrates the scenario: analyze clash issue and create clash 
  
 ## Live version
 
-(TO Deploy)
+https://bim360-clash-issue.herokuapp.com/
+
+note: provision the app key with test BIM account firstly. click **Config** to get detail information)
 
 Watch [this video](https://youtu.be/_lPLdPvKxgA) on how to play the demo. 
+
 
 ## Demonstrations
 
@@ -60,7 +59,7 @@ Watch [this video](https://youtu.be/_lPLdPvKxgA) to learn how to use this demo.
 
 ## Technology Architecture
 
-  < TODO >
+https://bim360-clash-issue.herokuapp.com/
 
 # Setup
 
@@ -87,17 +86,19 @@ Open the browser: [http://localhost:3000](http://localhost:3000). And follow the
 
 To deploy this application to Heroku, the **Callback URL** for Forge must use your `.herokuapp.com` address. After clicking on the button below, at the Heroku Create New App page, set your Client ID, Secret and Callback URL for Forge.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/xiaodongliang/bim360-node.js-issues.api)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/xiaodongliang/bim360-mcapi-node-clashissue.sample)
 
 Watch [this video](https://www.youtube.com/watch?v=Oqa9O20Gj0c) on how deploy samples to Heroku.
  
 
 # Further Reading
+
+- [Model Coordination API](https://dev.forge.autodesk.com/en/docs/bim360/v1/tutorials/model-coordination/?sha=6092_51)
+- [Model Coordination API SDK](https://www.npmjs.com/package/autodesk.forge.designautomation) 
 - [BIM 360 API](https://forge.autodesk.com/en/docs/bim360/v1/overview/) and [App Provisioning](https://forge.autodesk.com/blog/bim-360-docs-provisioning-forge-apps)
 - [Data Management API](https://forge.autodesk.com/en/docs/data/v2/overview/)
 - [Viewer](https://forge.autodesk.com/en/docs/viewer/v7)
  
-
 Tutorials:
 
 - [View BIM 360 Models](http://learnforge.autodesk.io/#/tutorials/viewhubmodels)
@@ -111,11 +112,15 @@ Blogs:
 
 ### Tips & Tricks
 
-1. to make simple demo, this sample code does not use database to store the issue list. While in reality, it should be the administrator who can refresh the issue list. The refresh should be stored to a database. 
+-  Since the clash data might be large, don't pull the file locally and then process it. Decompressing and streaming the results on the fly would also be recommended, as showned in this sample [utility.js](./server/utility.js) 
+- To make a simple demo, this sample does not use database to manage the clash data. 
+- On client (browser) side, it may be more efficient to manage the data by IndexDB if the app requires to perform various analysis in different browser sessions.
 
 ### Troubleshooting
 
-1. **Cannot see my BIM 360 projects**: Make sure to provision the Forge App Client ID within the BIM 360 Account, [learn more here](https://forge.autodesk.com/blog/bim-360-docs-provisioning-forge-apps). This requires the Account Admin permission.
+-  **Cannot see my BIM 360 projects**: Make sure to provision the Forge App Client ID within the BIM 360 Account, [learn more here](https://forge.autodesk.com/blog/bim-360-docs-provisioning-forge-apps). This requires the Account Admin permission.
+
+- The code of highlighting objects within Forge Viewer requires the corresponding documents of one clash instance have been loaded. If not, the highlighting will not work, try again when the loading is completed
  
 ## License
 

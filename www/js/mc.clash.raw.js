@@ -9,10 +9,14 @@ class ClashRawView {
   }
 
   reset() {
+
+    //clear table
+    if(this._clashtable) 
+       this._clashtable.rows().clear().draw() 
     this._clashJsonObj = null
     this._clashInsJsonObj = null
     this._testObj = null 
-    this._selectedClashes = null
+    this._selectedClashes = null 
   }
 
   async initClashRawHeader(){
@@ -26,7 +30,9 @@ class ClashRawView {
       { data: '6',title:"R View Id",orderable:false} 
     ]
     this._clashtable = $('#clashRawTable').DataTable( {
-      columns: cols,searching: false, paging: false, info: false,scrollY:"40vh",
+      columns: cols,ordering:false,searching: false,
+      bPaginate : true, pagingType: 'simple', 
+      info: false,scrollY:"40vh",
       scrollCollapse: true
      } );   
   }
@@ -36,9 +42,7 @@ class ClashRawView {
     try {
        $('#clashviewSpinner').css({ display: "block" })
 
-      //clear table
-      if(this._clashtable) 
-           this._clashtable.rows().clear().draw()
+      
       //reset data
       this.reset() 
       //get raw clash data from server
@@ -55,14 +59,14 @@ class ClashRawView {
         var ins = this._clashInsJsonObj.instances.filter(
           function (data) { return data.cid == eachItem.id }
         ); 
-        var row={'0':index,'1':eachItem.dist,'2':eachItem.status,'3':ins[0].ldid,'4':ins[0].rdid,'5':ins[0].lvid,'6':ins[0].rvid}
+        var row={'0':eachItem.id,'1':eachItem.dist,'2':eachItem.status,'3':ins[0].ldid,'4':ins[0].rdid,'5':ins[0].lvid,'6':ins[0].rvid}
         rows.push(row)
       }
       this._clashtable.rows.add(rows).draw( false );   
 
       //since the content is switched to panel view, invoke tooltip style
       //$('[data-toggle="tooltip"]').tooltip()
-      $('#clashviewSpinner').css({ display: "none" });
+      $('#clashviewSpinner').css({ display: "block" })
 
       //this.delegateTableTooltip()
 

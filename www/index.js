@@ -49,25 +49,6 @@ $(document).ready(function () {
  
     if (global_oAuth.getForgeToken() != '') {
       global_dmProjects.refreshBIMHubs();  
-
-      //*for test
-      (async()=>{
-        // var hubId = 'b.a4f95080-84fe-4281-8d0a-bd8c885695e0'
-        // var projectId = 'b.f0f4e54f-8e37-4d30-a9e0-805c6dcc71a1'
-        // await global_dmProjects.refreshProjectInfo(hubId,projectId)
-
-        // global_msSet.mc_container_id = 'f0f4e54f-8e37-4d30-a9e0-805c6dcc71a1'
-        // global_msSet.ms_id = 'a96d98b1-6181-4b75-9a09-ff60e06789e3'
-        // global_msSet.ms_v_id = '1'
- 
-
-        // await global_msSet.refreshOneModelset('f0f4e54f-8e37-4d30-a9e0-805c6dcc71a1','a96d98b1-6181-4b75-9a09-ff60e06789e3','1') 
- 
-        // await global_forgeViewer.launchViewer(global_msSet._docsMap)
-        // await global_clashRawView.produceClashRawTable('f0f4e54f-8e37-4d30-a9e0-805c6dcc71a1','a96d98b1-6181-4b75-9a09-ff60e06789e3','1') 
-        // await global_mcReadIssue.produceClashIssues('f0f4e54f-8e37-4d30-a9e0-805c6dcc71a1','a96d98b1-6181-4b75-9a09-ff60e06789e3','1')
-      })()
-      
     } 
     
 
@@ -198,6 +179,10 @@ function delegateModelsetSelectedEvent(){
       global_msSet.ms_id = ms_id
       global_msSet.ms_v_id = ms_v_id
 
+      $('#clashviewSpinner').css({ display: "block" })
+      $('#clashissueSpinner').css({ display: "block" })
+      global_clashRawView.reset()
+      global_mcReadIssue.reset()
 
       let r = await global_msSet.refreshOneModelset(mc_container_id,ms_id,ms_v_id)
       if(r)
@@ -206,7 +191,9 @@ function delegateModelsetSelectedEvent(){
         r=await global_clashRawView.produceClashRawTable(mc_container_id,ms_id,ms_v_id)
       if(r)
         r= await global_mcReadIssue.produceClashIssues(mc_container_id,ms_id,ms_v_id)  
-         
+      $('#clashviewSpinner').css({ display: "none" })
+      $('#clashissueSpinner').css({ display: "none" })
+
       })(mc_container_id,ms_id,ms_v_id)
   }) 
 }

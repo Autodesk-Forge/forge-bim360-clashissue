@@ -49,17 +49,16 @@ html, body {
     background-position: center;
   }
 
-#tableIssueView{
+  #tableIssueView{
     margin:auto;
-    height: 40vh;
+    height: 30vh;
     display:block;  
 
 }
 #clashRawTable{
     margin:auto;
-    height: 40vh;
-    display:block;  
-
+    height: 35vh;
+    display:block;   
 }
 table.dataTable tbody tr:hover {
     background-color:#71d1eb !important;

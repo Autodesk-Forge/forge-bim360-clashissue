@@ -24,7 +24,6 @@ const mkdir = require('mkdirp')
 const utility = require("./utility") 
 const mcMSServices = require('./services/mc.modelset.services')
 const mcClashServices = require('./services/mc.clash.services');
-const mcIndexServices = require('./services/mc.index.services'); 
 
 const clashDataFolder = './ClashData/'
 
@@ -144,7 +143,7 @@ async function getClashIssueData(folder,input){
 
 }
 
-//build map with document displayname, index string and clash document id 
+//build map with document displayname and clash document id 
 async function buildDocsMap(folder) {
  
   if(fs.existsSync(folder + DataNameEnum.DOCUMENTS_MAP)){
