@@ -98,11 +98,7 @@ Watch [this video](https://www.youtube.com/watch?v=Oqa9O20Gj0c) on how deploy sa
 - [BIM 360 API](https://forge.autodesk.com/en/docs/bim360/v1/overview/) and [App Provisioning](https://forge.autodesk.com/blog/bim-360-docs-provisioning-forge-apps)
 - [Data Management API](https://forge.autodesk.com/en/docs/data/v2/overview/)
 - [Viewer](https://forge.autodesk.com/en/docs/viewer/v7)
-## Tutorials
-- [Model Coordination API Document](https://dev.forge.autodesk.com/en/docs/bim360/v1/tutorials/model-coordination/mc-concept-modelset/?sha=6092_51)
-- [View BIM 360 Models](http://learnforge.autodesk.io/#/tutorials/viewhubmodels)
  
-
 Tutorials:
 
 - [View BIM 360 Models](http://learnforge.autodesk.io/#/tutorials/viewhubmodels)
