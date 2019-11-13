@@ -116,11 +116,15 @@ Blogs:
 
 ### Tips & Tricks
 
-1. to make simple demo, this sample code does not use database to store the issue list. While in reality, it should be the administrator who can refresh the issue list. The refresh should be stored to a database. 
+-  Since the clash data might be large, don't pull the file locally and then process it. Decompressing and streaming the results on the fly would also be recommended, as showned in this sample [utility.js](./server/utility.js) 
+- To make a simple demo, this sample does not use database to manage the clash data. 
+- On client (browser) side, it may be more efficient to manage the data by IndexDB if the app requires to perform various analysis in different browser sessions.
 
 ### Troubleshooting
 
-1. **Cannot see my BIM 360 projects**: Make sure to provision the Forge App Client ID within the BIM 360 Account, [learn more here](https://forge.autodesk.com/blog/bim-360-docs-provisioning-forge-apps). This requires the Account Admin permission.
+-  **Cannot see my BIM 360 projects**: Make sure to provision the Forge App Client ID within the BIM 360 Account, [learn more here](https://forge.autodesk.com/blog/bim-360-docs-provisioning-forge-apps). This requires the Account Admin permission.
+
+- The code of highlighting objects within Forge Viewer requires the corresponding documents of one clash instance have been loaded. If not, the highlighting will not work, try again when the loading is completed
  
 ## License
 
