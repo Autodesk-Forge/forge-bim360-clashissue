@@ -1,7 +1,7 @@
 {
-  "name": "BIM 360 Model Coordination API Sample - Clash View Basic Application",
-  "description": "This repository demonstrates basic viewing of clash raw data by Model Coordination API. It lists all clash instances data, and allows the user to click one instance to highlight within Forge Viewer.",
-  "repository": "https://github.com/xiaodongliang/bim360-mcapi-node-clashview-basic.sample",
+  "name": "BIM 360 Model Coordination API Sample - Clash Issues",
+  "description": "This repository demonstrates the scenario: analyze clash issue and create clash issue from application.",
+  "repository": "https://github.com/xiaodongliang/bim360-mcapi-node-clashissue.sample",
   "logo": "https://avatars0.githubusercontent.com/u/8017462?v=3&s=200",
   "keywords": [
     "express",
