@@ -32,22 +32,7 @@ module.exports = {
   // Required scopes for your application on server-side
   scopeInternal: ['account:read','bucket:create', 'bucket:read', 'data:read', 'data:create', 'data:write'],
   // Required scope of the token sent to the client
-  scopePublic: ['viewables:read'],
-
-  pb:{
-     AuthorityUrl : 'https://login.microsoftonline.com/common',
-     resourceUrl : 'https://analysis.windows.net/powerbi/api',
-     apiUrl : 'https://api.powerbi.com',
-     embedUrlBase : 'https://app.powerbi.com',
-
-     pbiUsername : 'xiaodong@bim360mcapi.onmicrosoft.com',
-     pbiPassword : 'Delisa99!@#',  
-     applicationId : '7de05351-5740-4f76-a361-740b40e16fb7',
-     workspaceId : '53ce46ba-3cf4-49d0-a9bd-93a077abc9fa',
-     reportId : 'e0448bb5-a3d8-40c7-811e-189ad0e3c18d',
-     datasetId:'b09f4cc1-6fb2-4ac5-bb69-a42fafcdeb70',
-     tableName:'clashedObjects' 
-  }, 
+  scopePublic: ['viewables:read'], 
 
   hqv1: {
     basedUrl: 'https://developer.api.autodesk.com',
