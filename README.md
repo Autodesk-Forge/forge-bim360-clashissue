@@ -1,7 +1,7 @@
 # BIM 360 Model Coordination API Sample - Clash Issues 
 
-[![node](https://img.shields.io/badge/nodejs-6.11.1-yellow.svg)](https://nodejs.org)
-[![npm](https://img.shields.io/badge/npm-3.10.10-green.svg)](https://www.npmjs.com/)
+[![node](https://img.shields.io/badge/nodejs-v10+-yellow.svg)](https://nodejs.org)
+[![npm](https://img.shields.io/badge/npm-v6+-yellow.svg)](https://www.npmjs.com/)
 
 [![oAuth2](https://img.shields.io/badge/oAuth2-v1-green.svg)](https://forge.autodesk.com/en/docs/oauth/v2/overview/)
 [![Data-Management](https://img.shields.io/badge/Data%20Management-v1-green.svg)](https://forge.autodesk.com/en/docs/data/v2/developers_guide/overview/)
@@ -10,17 +10,15 @@
  
 
 [![BIM 360 Model Set](https://img.shields.io/badge/BIM%20360%20Model%20Set-3.0.65-orange)](https://www.npmjs.com/package/forge-bim360-modelcoordination-modelset)
-[![BIM 360 Clash](https://img.shields.io/badge/BIM%20360%20Clash-3.3.27-yellowgreen)](https://www.npmjs.com/package/forge-bim360-modelcoordination-clash)
+[![BIM 360 Clash](https://img.shields.io/badge/BIM%20360%20Clash-3.3.27-orange)](https://www.npmjs.com/package/forge-bim360-modelcoordination-clash)
 
-[![License](http://img.shields.io/:license-mit-red.svg)](http://opensource.org/licenses/MIT)
+[![License](http://img.shields.io/:license-MIT-red.svg)](http://opensource.org/licenses/MIT)
 [![Level](https://img.shields.io/badge/Level-Intermediate-blue.svg)](http://developer.autodesk.com/)
 
 
 ## Description
 
-This repository demonstrates the scenario: analyze clash issue and create clash issue from application. To work with the sample, firstly upload some source modesl manually to BIM 360 folder, or by other tool such as [BIM 360 Model Coordination Unit Test in Node.js](https://github.com/xiaodongliang/bim360-mcapi-node-unit.test/blob/master/test_04_CreateModelSet.js) and create model set in Model Coordination module with this folder. The demo source model files can be found at [BIM 360 Model Coorination API Unit Test
- in Node.js](https://github.com/xiaodongliang/bim360-mcapi-node-unit.test/tree/master/Source%20Files). It includes two versions of models set.
-
+This repository demonstrates the scenario: analyze clash issue and create clash issue from application. 
 
 ## Thumbnail
 
@@ -28,14 +26,16 @@ This repository demonstrates the scenario: analyze clash issue and create clash 
  
 ## Live version
 
-[bim360-clash-issue.herokuapp.com](https://bim360-clash-issue.herokuapp.com)
+Live verion: [bim360-clash-issue.herokuapp.com](https://bim360-clash-issue.herokuapp.com)
 
-note: provision the app key with test BIM account firstly. click **Config** to get detail information)
+> To use this sample with your BIM 360 you need to "Enable Custom Integrations". At the app top-right, click **Config** to get detailed steps.
 
-Watch [this video](https://youtu.be/_lPLdPvKxgA) on how to play the demo. 
+Recording: [this video](https://youtu.be/_lPLdPvKxgA) on how to play the demo. 
 
 
-## Demonstrations
+## Demonstration
+
+To work with the sample, firstly upload some source models to BIM 360 folder, then create model set in Model Coordination module with this folder. Please refer to [BIM 360 Model Coordination documentation](http://help.autodesk.com/view/BIM360D/ENU/?guid=GUID-38CC3A1C-92FF-4682-847F-9CFAFCC4CCCE) for details. Check `Sample Files` folder for testing RVT files, it includes two versions of models set.
 
 1. After logging in, on top left of navigation panel, select one hub, then select one project. 
 2. After selecting one project, the active modelsets in this activeproject will be listed.
@@ -50,7 +50,7 @@ Watch [this video](https://youtu.be/_lPLdPvKxgA) on how to play the demo.
 
 After a while, **Clash Issue Table** will be refreshed. Switch to BIM 360 UI, check the newly created issue there. It also contains the screenshot of the clash as attachment.
 
-![UI](help/ui.png)
+![UI](/help/ui.png)
 
 Watch [this video](https://youtu.be/_lPLdPvKxgA) to learn how to use this demo.
 
@@ -98,8 +98,7 @@ Watch [this video](https://www.youtube.com/watch?v=Oqa9O20Gj0c) on how deploy sa
  
 
 ## Further Reading
-- [Model Coordination API](https://forge.autodesk.com/en/docs/bim360/v1/tutorials/model-coordination/)
-- [Model Coordination API SDK](https://www.npmjs.com/package/autodesk.forge.designautomation) 
+- [Model Coordination](https://forge.autodesk.com/en/docs/bim360/v1/overview/field-guide/model-coordination/)
 - [BIM 360 API](https://forge.autodesk.com/en/docs/bim360/v1/overview/) and [App Provisioning](https://forge.autodesk.com/blog/bim-360-docs-provisioning-forge-apps)
 - [Data Management API](https://forge.autodesk.com/en/docs/data/v2/overview/)
 - [Viewer](https://forge.autodesk.com/en/docs/viewer/v7)

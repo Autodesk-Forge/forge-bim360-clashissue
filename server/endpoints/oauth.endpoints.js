@@ -30,7 +30,7 @@ var forgeSDK = require('forge-apis');
 var config = require('../config');
 var UserSession = require('../services/userSession'); 
 
-router.get('/oauth/clientid', function (req, res) {
+router.get('/api/forge/clientID', function (req, res) {
   res.json({
     'ForgeClientId': config.credentials.client_id
   });
