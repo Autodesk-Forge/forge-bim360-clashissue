@@ -1,10 +1,7 @@
 # BIM 360 Model Coordination API Sample - Clash Issues 
 
-This repository demonstrates the scenario: analyze clash issue and create clash issue from application. 
-
 [![node](https://img.shields.io/badge/nodejs-6.11.1-yellow.svg)](https://nodejs.org)
 [![npm](https://img.shields.io/badge/npm-3.10.10-green.svg)](https://www.npmjs.com/)
-[![visual code](https://img.shields.io/badge/visual%20code-1.28.2-orange.svg)](https://code.visualstudio.com)
 
 [![oAuth2](https://img.shields.io/badge/oAuth2-v1-green.svg)](https://forge.autodesk.com/en/docs/oauth/v2/overview/)
 [![Data-Management](https://img.shields.io/badge/Data%20Management-v1-green.svg)](https://forge.autodesk.com/en/docs/data/v2/developers_guide/overview/)
@@ -12,25 +9,26 @@ This repository demonstrates the scenario: analyze clash issue and create clash 
 [![BIM-360](https://img.shields.io/badge/BIM%20360-v1-green.svg)](https://forge.autodesk.com/en/docs/bim360/v1/overview/introduction/) 
  
 
-[![ModelSetAPI](https://img.shields.io/badge/ModelSetAPI-3.0.65-orange)](https://www.npmjs.com/package/forge-bim360-modelcoordination-modelset)
-[![ClashAPI](https://img.shields.io/badge/ClashAPI-3.3.27-yellowgreen)](https://www.npmjs.com/package/forge-bim360-modelcoordination-clash)
+[![BIM 360 Model Set](https://img.shields.io/badge/BIM%20360%20Model%20Set-3.0.65-orange)](https://www.npmjs.com/package/forge-bim360-modelcoordination-modelset)
+[![BIM 360 Clash](https://img.shields.io/badge/BIM%20360%20Clash-3.3.27-yellowgreen)](https://www.npmjs.com/package/forge-bim360-modelcoordination-clash)
 
 [![License](http://img.shields.io/:license-mit-red.svg)](http://opensource.org/licenses/MIT)
 [![Level](https://img.shields.io/badge/Level-Intermediate-blue.svg)](http://developer.autodesk.com/)
 
 
 ## Description
+
 This repository demonstrates the scenario: analyze clash issue and create clash issue from application. To work with the sample, firstly upload some source modesl manually to BIM 360 folder, or by other tool such as [BIM 360 Model Coordination Unit Test in Node.js](https://github.com/xiaodongliang/bim360-mcapi-node-unit.test/blob/master/test_04_CreateModelSet.js) and create model set in Model Coordination module with this folder. The demo source model files can be found at [BIM 360 Model Coorination API Unit Test
  in Node.js](https://github.com/xiaodongliang/bim360-mcapi-node-unit.test/tree/master/Source%20Files). It includes two versions of models set.
 
 
 ## Thumbnail
 
-<p align="center"><img src="./help/main.png" width="1000"></p>
+![thumbnail](/thumbnail.png)
  
 ## Live version
 
-https://bim360-clash-issue.herokuapp.com/
+[bim360-clash-issue.herokuapp.com](https://bim360-clash-issue.herokuapp.com)
 
 note: provision the app key with test BIM account firstly. click **Config** to get detail information)
 
@@ -44,22 +42,17 @@ Watch [this video](https://youtu.be/_lPLdPvKxgA) on how to play the demo.
 3. Click one modelset, all clash instances will be displayed in **Clash Raw Table**. All clash assigned issue of this modelset will also be displayed in **Clash Issue Table**. All documents of this modelset will also be loaded in the Forge viewer
 4. Select one issue in **Clash Issue Table**, the corresponding clash will be highlighted in the Forge viewer. Click **Issue Icon** of the Forge Viewer toolbar, the pushpin of the issues will be displayed, including a property panel with basic information of the issue.
 
-<p align="center"><img src="./help/readissue.png" width="400"></p>
+![Read Issues](/help/readissue.png)
 
 5.  Select one issue in **Clash Raw Table** you want to create clash issue, the corresponding clash will be highlighted in the Forge viewer. Click **Edit Icon** of the Forge Viewer toolbar, input a title for the new issue, then click elements of the clashed objects (red/blue). The process of creating a new clash issue will start. 
 
-<p align="center"><img src="./help/createissue.png" width="400"></p>
+![Create Issues](/help/createissue.png)
 
 After a while, **Clash Issue Table** will be refreshed. Switch to BIM 360 UI, check the newly created issue there. It also contains the screenshot of the clash as attachment.
 
-<p align="center"><img src="./help/ui.png" width="600"></p>
+![UI](help/ui.png)
 
 Watch [this video](https://youtu.be/_lPLdPvKxgA) to learn how to use this demo.
-
-
-## Technology Architecture
-
-https://bim360-clash-issue.herokuapp.com/
 
 # Setup
 
@@ -73,14 +66,27 @@ https://bim360-clash-issue.herokuapp.com/
 ## Running locally
 Clone this project or download it. It's recommended to install [GitHub desktop](https://desktop.github.com/). To clone it via command line, use the following (**Terminal** on MacOSX/Linux, **Git Shell** on Windows):
 
-    git clone  https://github.com/xiaodongliang/bim360-mcapi-node-clashissue.sample
+    git clone  https://github.com/autodesk-forge/forge-bim360-clashissue
 
 Open the project folder in **Visual Studio Code**. Install the required packages, set the environment variables with your client ID & secret and finally start it. Via command line, navigate to the folder where this repository was cloned and use the following:
 
-    npm install 
-    node start.js
+Mac OSX/Linux (Terminal)
 
-Open the browser: [http://localhost:3000](http://localhost:3000). And follow the thumbnail.gif to play the features.
+    npm install
+    export FORGE_CLIENT_ID=<<YOUR CLIENT ID FROM DEVELOPER PORTAL>>
+    export FORGE_CLIENT_SECRET=<<YOUR CLIENT SECRET>>
+    export FORGE_CALLBACK_URL=<<YOUR CALLBACK URL>>
+    npm start
+
+Windows (use **Node.js command line** from Start menu)
+
+    npm install
+    set FORGE_CLIENT_ID=<<YOUR CLIENT ID FROM DEVELOPER PORTAL>>
+    set FORGE_CLIENT_SECRET=<<YOUR CLIENT SECRET>>
+    set FORGE_CALLBACK_URL=<<YOUR CALLBACK URL>>
+    npm start
+
+Open the browser: [http://localhost:3000](http://localhost:3000).
 
 ## Deployment
 
@@ -100,7 +106,6 @@ Watch [this video](https://www.youtube.com/watch?v=Oqa9O20Gj0c) on how deploy sa
 
 ## Tutorials
 - [Model Coordination API Document](https://forge.autodesk.com/en/docs/bim360/v1/tutorials/model-coordination)
-- [Model Coordination API .NET Tutorials](TODO)
 - [View BIM 360 Models](http://learnforge.autodesk.io/#/tutorials/viewhubmodels)
 - [Retrieve Issues](https://forge.autodesk.com/en/docs/bim360/v1/tutorials/retrieve-issues)
 

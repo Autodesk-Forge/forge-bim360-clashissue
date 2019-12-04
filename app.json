@@ -1,7 +1,7 @@
 {
   "name": "BIM 360 Model Coordination API Sample - Clash Issues",
   "description": "This repository demonstrates the scenario: analyze clash issue and create clash issue from application.",
-  "repository": "https://github.com/xiaodongliang/bim360-mcapi-node-clashissue.sample",
+  "repository": "https://github.com/autodesk-forge/forge-bim360-clashissue",
   "logo": "https://avatars0.githubusercontent.com/u/8017462?v=3&s=200",
   "keywords": [
     "express",
@@ -21,7 +21,7 @@
     },
     "FORGE_CALLBACK_URL": {
       "description": "Callback URL of your Forge app, required for 3-legged OAuth",
-      "value": "https://<<YOUR HEROKU APP NAME HERE>>.herokuapp.com/oauth/callback"
+      "value": "https://<<YOUR HEROKU APP NAME HERE>>.herokuapp.com/api/forge/callback/oauth"
     }
   },
   "website": "",
